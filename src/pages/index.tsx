@@ -1,9 +1,10 @@
 import * as React from "react"
 import styled from "styled-components"
+import logo from "../static/images/logos/logo.svg"
 
 const IndexPage = () => (
   <Wrapper>
-    <Logo src="./images/logos/logo.svg" alt="logo" />
+    <Logo src={logo} alt="logo" />
   </Wrapper>
 )
 
