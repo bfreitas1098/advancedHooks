@@ -54,6 +54,7 @@ const HeroWrapper = styled.div`
   @media (max-width: 780px) {
     grid-template-columns: 1fr;
     justify-items: center;
+    padding: 170px 20px 0px;
   }
 `
 
