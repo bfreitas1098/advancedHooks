@@ -1,12 +1,13 @@
 import * as React from "react"
 import styled from "styled-components"
-import Reactlogo from "../static/images/logos/react-logo.svg"
-import Authoravatar from "../static/images/avatars/Meng.png"
+import ReactLogo from "../static/images/logos/react-logo.svg"
+import AuthorAvatar from "../static/images/avatars/Meng.png"
+import PurchaseButton from "../components/buttons/PurchaseButton"
 
 const IndexPage = () => (
   <Wrapper>
     <TextWrapper>
-      <Logo src={Reactlogo} alt="logo" />
+      <Logo src={ReactLogo} alt="logo" />
       <Title>Build a web app with React Hooks</Title>
       <Caption>20 sections - 3 hours of videos</Caption>
       <Description>
@@ -14,9 +15,14 @@ const IndexPage = () => (
         Gatsby, Netlify, and advanced CSS techniques with Styled Components.
       </Description>
       <AuthorWrapper>
-        <AvatarImage src={Authoravatar} alt="avatar" />
+        <AvatarImage src={AuthorAvatar} alt="avatar" />
         <Caption>Taught by Meng To</Caption>
       </AuthorWrapper>
+      <PurchaseButton />
+      <SmallText>
+        Purchase includes access to 30 courses. Over 80 hours of content,
+        including 12 hours for SwiftUI, for iOS 13 and iOS 14.
+      </SmallText>
     </TextWrapper>
   </Wrapper>
 )
@@ -76,4 +82,12 @@ const AuthorWrapper = styled.div`
 const AvatarImage = styled.img`
   width: 32px;
   height: 32px;
+`
+
+const SmallText = styled.p`
+  max-width: 280px;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 130%;
+  color: rgba(255, 255, 255, 0.7);
 `
