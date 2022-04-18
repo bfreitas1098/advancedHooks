@@ -3,27 +3,31 @@ import styled from "styled-components"
 import ReactLogo from "../static/images/logos/react-logo.svg"
 import AuthorAvatar from "../static/images/avatars/Meng.png"
 import PurchaseButton from "../components/buttons/PurchaseButton"
+import CourseCard from "../components/cards/CourseCard"
 
 const IndexPage = () => (
   <Wrapper>
-    <TextWrapper>
-      <Logo src={ReactLogo} alt="logo" />
-      <Title>Build a web app with React Hooks</Title>
-      <Caption>20 sections - 3 hours of videos</Caption>
-      <Description>
-        Learn how we built the new Design+Code site with React Hooks using
-        Gatsby, Netlify, and advanced CSS techniques with Styled Components.
-      </Description>
-      <AuthorWrapper>
-        <AvatarImage src={AuthorAvatar} alt="avatar" />
-        <Caption>Taught by Meng To</Caption>
-      </AuthorWrapper>
-      <PurchaseButton />
-      <SmallText>
-        Purchase includes access to 30 courses. Over 80 hours of content,
-        including 12 hours for SwiftUI, for iOS 13 and iOS 14.
-      </SmallText>
-    </TextWrapper>
+    <HeroWrapper>
+      <CourseCard />
+      <TextWrapper>
+        <Logo src={ReactLogo} alt="logo" />
+        <Title>Build a web app with React Hooks</Title>
+        <Caption>20 sections - 3 hours of videos</Caption>
+        <Description>
+          Learn how we built the new Design+Code site with React Hooks using
+          Gatsby, Netlify, and advanced CSS techniques with Styled Components.
+        </Description>
+        <AuthorWrapper>
+          <AvatarImage src={AuthorAvatar} alt="avatar" />
+          <Caption>Taught by Meng To</Caption>
+        </AuthorWrapper>
+        <PurchaseButton />
+        <SmallText>
+          Purchase includes access to 30 courses. Over 80 hours of content,
+          including 12 hours for SwiftUI, for iOS 13 and iOS 14.
+        </SmallText>
+      </TextWrapper>
+    </HeroWrapper>
   </Wrapper>
 )
 
@@ -32,6 +36,36 @@ export default IndexPage
 const Wrapper = styled.div`
   height: 1247px;
   background: linear-gradient(200.44deg, #4316db 13.57%, #9076e7 98.38%);
+
+  @media (max-width: 780px) {
+    height: 1450px;
+  }
+`
+
+const HeroWrapper = styled.div`
+  display: grid;
+  max-width: 1234px;
+  grid-template-columns: 360px auto;
+  gap: 60px;
+  padding: 220px 20px 0px;
+  justify-content: center;
+  margin: 0 auto;
+
+  @media (max-width: 780px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+`
+
+const TextWrapper = styled.div`
+  position: relative;
+  display: grid;
+  gap: 20px;
+
+  @media (max-width: 780px) {
+    justify-items: center;
+    text-align: center;
+  }
 `
 
 const Logo = styled.img`
@@ -64,13 +98,6 @@ const Description = styled.p`
   font-size: 20px;
   line-height: 140%;
   color: #ffffff;
-`
-
-const TextWrapper = styled.div`
-  position: relative;
-  display: grid;
-  gap: 20px;
-  padding-top: 220px;
 `
 
 const AuthorWrapper = styled.div`
