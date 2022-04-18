@@ -51,6 +51,10 @@ const HeroWrapper = styled.div`
   justify-content: center;
   margin: 0 auto;
 
+  .course-card {
+    margin-top: 39px;
+  }
+
   @media (max-width: 780px) {
     grid-template-columns: 1fr;
     justify-items: center;
