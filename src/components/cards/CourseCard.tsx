@@ -1,10 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 import illustration from "../../static/images/illustrations/illustration-1.png"
+import Circles from "../animations/Circles"
 
 function CourseCard() {
   return (
     <Wrapper className="course-card">
+      <AnimationWrapper>
+        <Circles />
+      </AnimationWrapper>
       <Illustration src={illustration} alt="illustration" />
     </Wrapper>
   )
@@ -25,6 +29,15 @@ const Wrapper = styled.div`
   justify-content: center;
   align-content: center;
 `
+
+const AnimationWrapper = styled.div`
+  position: absolute;
+  width: 360px;
+  overflow: hidden;
+  padding-top: 30px;
+  mix-blend-mode: overlay;
+`
+
 const Illustration = styled.img`
   width: 300px;
 `
