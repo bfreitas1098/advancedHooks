@@ -17,6 +17,7 @@ export default Circles
 const Wrapper = styled.div`
   width: 420px;
   height: 420px;
+  cursor: pointer;
 `
 
 const scale = keyframes`
