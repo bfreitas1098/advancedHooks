@@ -5,7 +5,7 @@ function Circles() {
   const [animation, setAnimation] = useState(false)
 
   return (
-    <Wrapper onClick={() => setAnimation(true)}>
+    <Wrapper onMouseOver={() => setAnimation(true)}>
       <Circle animation={animation} />
       <Circle2 animation={animation} />
     </Wrapper>
@@ -14,15 +14,15 @@ function Circles() {
 
 export default Circles
 
+const scale = keyframes`
+0% { transform: scale(1)}
+100% { transform: scale(1.2)}
+`
+
 const Wrapper = styled.div`
   width: 420px;
   height: 420px;
   cursor: pointer;
-`
-
-const scale = keyframes`
-0% { transform: scale(1)}
-100% { transform: scale(1.2)}
 `
 
 const Circle = styled.div`
@@ -38,7 +38,7 @@ const Circle = styled.div`
   border-radius: 210px;
   left: calc(50% - 420px / 2);
   top: calc(50% - 420px / 2);
-  animation: ${scale} 0.8s 0.2s linear forwards;
+  animation: ${scale} 0.5s 0.1s linear forwards;
   animation-play-state: ${props => (props.animation ? "running" : "paused")};
 `
 
