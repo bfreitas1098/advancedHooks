@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import illustration from "../../static/images/illustrations/illustration-1.png"
 import Circles from "../animations/Circles"
 
@@ -15,11 +15,6 @@ function CourseCard() {
 }
 
 export default CourseCard
-
-const scale = keyframes`
-0% { transform: scale(1)}
-100% { transform: scale(1.03)}
-`
 
 const Wrapper = styled.div`
   position: relative;
@@ -41,12 +36,6 @@ const AnimationWrapper = styled.div`
   overflow: hidden;
   padding-top: 30px;
   mix-blend-mode: overlay;
-
-  :hover {
-    animation: ${scale} 0.5s 0.1s linear forwards;
-    animation-play-state: running, paused, running;
-    overflow: hidden;
-  }
 `
 
 const Illustration = styled.img`
