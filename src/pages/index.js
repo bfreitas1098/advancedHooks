@@ -4,6 +4,7 @@ import ReactLogo from "../static/images/logos/react-logo.svg"
 import AuthorAvatar from "../static/images/avatars/Meng.png"
 import PurchaseButton from "../components/buttons/PurchaseButton"
 import CourseCard from "../components/cards/CourseCard"
+import FlutterBuild from "../components/builds/FlutterBuild"
 
 const IndexPage = () => (
   <Wrapper>
@@ -28,6 +29,7 @@ const IndexPage = () => (
         </SmallText>
       </TextWrapper>
     </HeroWrapper>
+    <FlutterBuild />
   </Wrapper>
 )
 
